@@ -1,5 +1,5 @@
 export const navLinks = [
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '#' },
   {
     label: 'Municipality',
     href: '/about-richmond/',
@@ -52,7 +52,7 @@ export const navLinks = [
   },
   {
     label: 'Documents',
-    href: '/documents/',
+    href: '#documents',
     twoCol: true,
     children: [
       { label: 'Annual Reports', href: '/annual-reports/', icon: 'fas fa-folder' },
@@ -77,5 +77,5 @@ export const navLinks = [
       { label: 'Gallery', href: '/gallery/', icon: 'fas fa-camera' },
     ],
   },
-  { label: 'Contacts', href: '/contact-us/' },
+  { label: 'Contacts', href: '#contact-us' },
 ]

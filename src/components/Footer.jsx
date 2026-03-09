@@ -85,8 +85,8 @@ export default function Footer() {
         <div className="container">
           <p>
             All rights reserved 2025. Richmond Municipality. Website powered by{' '}
-            <a href="https://www.imvokoqa.co.za/" target="_blank" rel="noreferrer">
-              Imvokoqa Solutions
+            <a href="https://www.novadataco.co.za/" target="_blank" rel="noreferrer">
+              NovaData Co
             </a>
           </p>
         </div>
