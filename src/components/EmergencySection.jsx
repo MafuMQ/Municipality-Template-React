@@ -1,8 +1,8 @@
 const contacts = [
-  { icon: 'fas fa-building', label: 'Municipality', number: '+27 33 212 2155' },
-  { icon: 'fas fa-id-card', label: 'Police', number: '10111' },
-  { icon: 'fas fa-heartbeat', label: 'Ambulance / Fire', number: '10177' },
-  { icon: 'fas fa-hand-paper', label: 'Fraud Line', number: '+27 80 070 1701' },
+  { icon: 'fas fa-building', label: 'Municipality', number: '+27 33 212 2155', tel: '+27332122155' },
+  { icon: 'fas fa-id-card', label: 'Police', number: '10111', tel: '10111' },
+  { icon: 'fas fa-heartbeat', label: 'Ambulance / Fire', number: '10177', tel: '10177' },
+  { icon: 'fas fa-hand-paper', label: 'Fraud Line', number: '+27 80 070 1701', tel: '+27800701701' },
 ]
 
 export default function EmergencySection() {
@@ -14,7 +14,7 @@ export default function EmergencySection() {
             <i className={c.icon}></i>
             <div>
               <h4>{c.label}</h4>
-              <p>{c.number}</p>
+              <p><a href={`tel:${c.tel}`}>{c.number}</a></p>
             </div>
           </div>
         ))}
