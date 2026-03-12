@@ -320,6 +320,7 @@ tr:nth-child(even) { background: var(--color-bg-light); }
 .dept-contact-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px); }
 .dept-contact-icon { width: 48px; height: 48px; background: var(--color-green); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .dept-contact-icon i { color: var(--color-amber); font-size: 1.25rem; }
+.dept-contact-info { min-width: 0; overflow-wrap: break-word; word-break: break-word; }
 .dept-contact-info h4 { color: var(--color-green); font-size: 1.05rem; margin-bottom: 2px; }
 .dept-contact-info .dept-role { font-size: 0.82rem; color: var(--color-slate); margin-bottom: 10px; }
 .dept-contact-info p { font-size: 0.88rem; color: var(--color-slate); display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
@@ -506,6 +507,7 @@ tr:nth-child(even) { background: var(--color-bg-light); }
   .contact-map-col, .contact-form-col { min-width: 0; width: 100%; }
   .contact-info-strip-grid { grid-template-columns: 1fr 1fr; }
   .dept-contacts-grid { grid-template-columns: 1fr; }
+  .dept-contact-card { padding: 16px; gap: 14px; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-col { padding: 22px 16px; }
   .issue-category-grid { grid-template-columns: repeat(2, 1fr); }
