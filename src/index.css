@@ -132,7 +132,7 @@ img { max-width: 100%; height: auto; display: block; }
 .mayor-image { background: var(--color-white); border-radius: 25px 25px 0 0; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
 .mayor-content { width: 65%; padding-top: 0px; padding-bottom: 30px; }
 .mayor-content h6 { font-size: 1.2rem; color: var(--color-slate); line-height: 1; }
-.mayor-content h4 { font-size: 1.5rem; color: var(--color-amber); line-height: 1; }
+.mayor-content h4 { font-size: 1.5rem; color: var(--color-amber); line-height: 1; margin-top: 5px; margin-bottom: 5px; }
 .mayor-content h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1;}
 
 /* ── Emergency Contacts ── */
@@ -170,10 +170,10 @@ img { max-width: 100%; height: auto; display: block; }
 /* ── Quote & Mission ── */
 .quote-banner { background: var(--color-slate); color: var(--color-white); text-align: center; padding: 40px 20px; font-size: 1.3rem; }
 .mission-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-.mv-card { padding-left: 20px; }
-.mv-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.mv-card { padding-left: 20px; padding-top: 40px; }
+.mv-header { display: flex; align-items: center; gap: 15px; margin-bottom: 0px; }
 .mv-header i { font-size: 3rem; color: var(--color-green); }
-.mv-card h2 { color: var(--color-amber); margin-left: 65px; }
+.mv-card h2 { color: var(--color-amber); margin-left: 65px; margin-bottom: 25px; font-size: 40px; margin-top: -10px;}
 
 /* ── Departments & News ── */
 .depts-news-section { background: linear-gradient(to bottom, var(--color-white) 30%, var(--color-amber) 0); padding-bottom: 0; }
@@ -293,6 +293,15 @@ tr:nth-child(even) { background: var(--color-bg-light); }
 .form-group textarea:focus { outline: none; border-color: var(--color-green); box-shadow: 0 0 0 3px rgba(35,100,46,0.1); }
 .form-group textarea { resize: vertical; min-height: 138px; }
 .contact-submit-btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 30px; font-size: 1rem; }
+
+/* Issue Category Tiles */
+.issue-category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 8px; }
+.issue-category-tile { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 14px 8px; border: 2px solid var(--color-border); border-radius: 10px; background: var(--color-white); cursor: pointer; font-size: 0.82rem; color: var(--color-slate); transition: border-color 0.2s, background 0.2s, color 0.2s; }
+.issue-category-tile i { font-size: 1.4rem; color: var(--color-green); transition: color 0.2s; }
+.issue-category-tile:hover { border-color: var(--color-green); background: rgba(var(--color-green-rgb, 0,100,0), 0.04); }
+.issue-category-tile.active { border-color: var(--color-green); background: var(--color-green); color: var(--color-white); }
+.issue-category-tile.active i { color: var(--color-white); }
+.btn-full { width: 100%; justify-content: center; }
 
 /* Success State */
 .form-success { text-align: center; padding: 30px 10px; }
@@ -430,6 +439,7 @@ tr:nth-child(even) { background: var(--color-bg-light); }
   .mayor-image img { max-height: 280px; }
   .mayor-content { padding: 24px 0 28px; }
   .mayor-content h1 { font-size: 2rem; }
+  
 
   /* Emergency */
   .emergency-section { padding: 28px 0; }
@@ -491,10 +501,13 @@ tr:nth-child(even) { background: var(--color-bg-light); }
   .page-hero h1 { font-size: 1.9rem; }
 
   /* Contact */
+  .contact-layout { gap: 24px; }
+  .contact-map-col, .contact-form-col { min-width: 0; width: 100%; }
   .contact-info-strip-grid { grid-template-columns: 1fr 1fr; }
   .dept-contacts-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-col { padding: 22px 16px; }
+  .issue-category-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Documents */
   .documents-grid { grid-template-columns: 1fr 1fr; gap: 14px; }

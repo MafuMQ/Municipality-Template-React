@@ -19,7 +19,7 @@ export const documentCategories = [
     slug: 'annual-reports',
     label: 'Annual Reports',
     icon: 'fas fa-folder',
-    description: 'Annual performance and financial reports published by Richmond Local Municipality.',
+    description: 'Annual performance and financial reports published by uMhlabuyalingana Local Municipality.',
     folderId: '1liKkroX9XxHWROQNgU4aNr8bEks4Gv6F',
   },
   {
@@ -33,7 +33,7 @@ export const documentCategories = [
     slug: 'by-laws',
     label: 'By-Laws',
     icon: 'fas fa-gavel',
-    description: 'Enacted by-laws governing conduct and services within the Richmond municipal area.',
+    description: 'Enacted by-laws governing conduct and services within the uMhlabuyalingana municipal area.',
     folderId: '1QGvdVxeD-rPqhdoAWNiu0FHAsuKbvhd0',
   },
   {

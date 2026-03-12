@@ -14,6 +14,7 @@ import WeatherSection from './components/WeatherSection'
 import ContactPage from './components/ContactPage'
 import DocumentsPage from './components/DocumentsPage'
 import DocumentCategoryPage from './components/DocumentCategoryPage'
+import ReportIssuePage from './components/ReportIssuePage'
 import { documentCategories } from './data/documentCategories'
 import Footer from './components/Footer'
 
@@ -21,6 +22,7 @@ function getPage() {
   const hash = window.location.hash
   if (hash === '#contact-us') return 'contact'
   if (hash === '#documents') return 'documents'
+  if (hash === '#report-an-issue') return 'report-issue'
   if (hash.startsWith('#doc/')) {
     const slug = hash.slice(5)
     const cat = documentCategories.find((c) => c.slug === slug)
@@ -51,6 +53,8 @@ export default function App() {
       <main>
         {currentPage === 'contact' ? (
           <ContactPage />
+        ) : currentPage === 'report-issue' ? (
+          <ReportIssuePage />
         ) : currentPage === 'documents' ? (
           <DocumentsPage />
         ) : currentPage?.type === 'doc-category' ? (

@@ -101,7 +101,7 @@ export default function Navbar() {
   /* ── Mobile drawer (hidden on desktop via CSS) ── */
   const mobileDrawer = (
     <>
-      <a href="https://richmond.gov.za/report-an-issue/" className="mobile-cta-btn btn">Report An Issue</a>
+      <a href="#report-an-issue" className="mobile-cta-btn btn">Report An Issue</a>
 
       <button
         className={`mobile-hamburger${mobileOpen ? ' is-open' : ''}`}
@@ -173,7 +173,7 @@ export default function Navbar() {
         </ul>
 
         <div className="mobile-drawer-footer">
-          <a href="https://richmond.gov.za/report-an-issue/" className="btn mobile-cta">Report An Issue</a>
+          <a href="#report-an-issue" className="btn mobile-cta">Report An Issue</a>
           <p><i className="fas fa-phone"></i> (033) 212 2155</p>
         </div>
       </nav>

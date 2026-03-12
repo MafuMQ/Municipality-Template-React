@@ -10,7 +10,7 @@ export default function TopBar() {
         </li>
         <li><i className="fas fa-map-marker-alt"></i> Main Road R22, KwaNgwanase</li>
       </ul>
-      <a href="https://umhlabuyalingana.gov.za/contact-us/" className="btn">Report An Issue</a>
+      <a href="#report-an-issue" className="btn">Report An Issue</a>
     </div>
   )
 }

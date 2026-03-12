@@ -13,7 +13,7 @@ export default function DeptsNews() {
     <section className="depts-news-section">
       <div className="container depts-news-layout">
         <div className="departments-panel">
-          <h6>Richmond Local Municipality</h6>
+          <h6>uMhlabuyalingana Local Municipality</h6>
           <h2>Departments</h2>
           {departments.map((d) => (
             <a href={d.href} key={d.label}>
@@ -25,7 +25,7 @@ export default function DeptsNews() {
         <div className="news-panel">
           <div className="news-header">
             <div>
-              <h6>Richmond Local Municipality</h6>
+              <h6>uMhlabuyalingana Local Municipality</h6>
               <h2>Recent News</h2>
             </div>
             <a href="/news/" className="btn">Read All News</a>
