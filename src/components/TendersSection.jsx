@@ -36,7 +36,7 @@ export default function TendersSection() {
                 <th>UPDATE DATE</th>
                 <th>TITLE</th>
                 <th>CLOSING DATE</th>
-                <th>DOWNLOAD</th>
+                <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>
@@ -46,7 +46,10 @@ export default function TendersSection() {
                   <td>{t.title}</td>
                   <td>{t.closing}</td>
                   <td>
-                    <a href={t.downloadHref} className="download-btn">DOWNLOAD</a>
+                    <div className="table-actions">
+                      <a href={t.downloadHref} target="_blank" rel="noreferrer" className="view-btn">VIEW</a>
+                      <a href={t.downloadHref} className="download-btn">DOWNLOAD</a>
+                    </div>
                   </td>
                 </tr>
               ))}

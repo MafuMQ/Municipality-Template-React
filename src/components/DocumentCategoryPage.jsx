@@ -159,7 +159,7 @@ export default function DocumentCategoryPage({ category }) {
                     <th>FILE NAME</th>
                     <th>TYPE</th>
                     <th>SIZE</th>
-                    <th>DOWNLOAD</th>
+                    <th>ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -172,14 +172,24 @@ export default function DocumentCategoryPage({ category }) {
                       </td>
                       <td>{formatBytes(f.size)}</td>
                       <td>
-                        <a
-                          href={f.webContentLink || f.webViewLink}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="download-btn"
-                        >
-                          <i className="fas fa-download" aria-hidden="true"></i> DOWNLOAD
-                        </a>
+                        <div className="table-actions">
+                          <a
+                            href={f.webViewLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="view-btn"
+                          >
+                            <i className="fas fa-eye" aria-hidden="true"></i> VIEW
+                          </a>
+                          <a
+                            href={f.webContentLink || f.webViewLink}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="download-btn"
+                          >
+                            <i className="fas fa-download" aria-hidden="true"></i> DOWNLOAD
+                          </a>
+                        </div>
                       </td>
                     </tr>
                   ))}

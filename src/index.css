@@ -210,6 +210,8 @@ th { background: var(--color-green); color: var(--color-white); padding: 15px; t
 td { padding: 12px 15px; border-bottom: 1px solid var(--color-border); }
 tr:nth-child(even) { background: var(--color-bg-light); }
 .download-btn { background: var(--color-amber); color: var(--color-black); padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; }
+.view-btn { background: var(--color-green); color: var(--color-white); padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 0.8rem; margin-right: 6px; }
+.table-actions { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 
 /* ── Weather Section ── */
 .weather-section { background: linear-gradient(135deg, var(--color-green), #1a5e3a); padding: 40px 0; color: var(--color-white); }
