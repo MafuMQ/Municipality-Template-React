@@ -1,10 +1,11 @@
+import { municipality } from '../config/municipalityConfig'
+
 export default function QuoteBanner() {
   return (
     <section className="quote-banner">
       <div className="container">
         <p>
-          "Access to quality{' '}
-          <b>social infrastructural development and sustainable economic opportunities."</b>
+          “{municipality.slogan}”
         </p>
       </div>
     </section>

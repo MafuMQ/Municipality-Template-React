@@ -1,18 +1,20 @@
-import mayorImg from '../assets/Councillor.png';
+import mayorImg from '../assets/Councillor.png'
+import { municipality } from '../config/municipalityConfig'
 
 export default function MayorSection() {
+  const { name, mayor } = municipality
   return (
     <section className="container mayor-section">
       <div className="mayor-image">
         <img
           src={mayorImg}
-          alt="Executive Mayor of uMhlabuyalingana Local Municipality"
+          alt={`Executive Mayor of ${name}`}
         />
       </div>
       <div className="mayor-content">
-        <h6>uMhlabuyalingana Local Municipality</h6>
-        <h4>His Worship the Executive Mayor</h4>
-        <h1>Cllr Thembinkosi Khumalo</h1>
+        <h6>{name}</h6>
+        <h4>{mayor.title}</h4>
+        <h1>{mayor.name}</h1>
         <p>
           Fellow citizens, uMhlabuyalingana Local Municipality remains committed to delivering
           quality services to our communities. Situated in the northeastern corner of KwaZulu-Natal,

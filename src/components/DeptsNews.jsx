@@ -1,19 +1,14 @@
 import { newsItems } from '../data/news'
+import { municipality } from '../config/municipalityConfig'
 
-const departments = [
-  { href: '/municipal-managers-office/', label: 'Office of the MM' },
-  { href: '/community-services/', label: 'Community Services' },
-  { href: '/technical-services/', label: 'Technical Services' },
-  { href: '/financial-services/', label: 'Financial Services' },
-  { href: '/corporate-services/', label: 'Corporate Services' },
-]
+const { name: municipalityName, departments } = municipality
 
 export default function DeptsNews() {
   return (
     <section className="depts-news-section">
       <div className="container depts-news-layout">
         <div className="departments-panel">
-          <h6>uMhlabuyalingana Local Municipality</h6>
+          <h6>{municipalityName}</h6>
           <h2>Departments</h2>
           {departments.map((d) => (
             <a href={d.href} key={d.label}>
@@ -25,7 +20,7 @@ export default function DeptsNews() {
         <div className="news-panel">
           <div className="news-header">
             <div>
-              <h6>uMhlabuyalingana Local Municipality</h6>
+              <h6>{municipalityName}</h6>
               <h2>Recent News</h2>
             </div>
             <a href="/news/" className="btn">Read All News</a>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
+import { municipality } from '../config/municipalityConfig'
 
-const LATITUDE = -26.98
-const LONGITUDE = 32.73
+const { latitude: LATITUDE, longitude: LONGITUDE, city: CITY } = municipality.location
 const API_URL = `https://api.open-meteo.com/v1/forecast?latitude=${LATITUDE}&longitude=${LONGITUDE}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Africa%2FJohannesburg&forecast_days=5`
 
 const weatherDescriptions = {
@@ -71,7 +71,7 @@ export default function WeatherSection() {
         <div className="weather-current">
           <i className={cw.icon + ' weather-icon-lg'}></i>
           <div>
-            <h3>KwaNgwanase</h3>
+            <h3>{CITY}</h3>
             <p className="weather-temp">{Math.round(current.temperature_2m)}°C</p>
             <p className="weather-desc">{cw.label} · Humidity {current.relative_humidity_2m}% · Wind {Math.round(current.wind_speed_10m)} km/h</p>
           </div>

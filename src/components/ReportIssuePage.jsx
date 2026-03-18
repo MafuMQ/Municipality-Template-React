@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import { municipality } from '../config/municipalityConfig'
+
+const { contact } = municipality
 
 const CATEGORIES = [
   { value: 'roads',        label: 'Roads & Potholes',       icon: 'fas fa-road' },
@@ -69,13 +72,13 @@ export default function ReportIssuePage() {
             </div>
             <div className="contact-info-card">
               <i className="fas fa-phone" aria-hidden="true"></i>
-              <div><h4>Emergency Line</h4><p><a href="tel:0335920680">(033) 212 2155</a></p></div>
+              <div><h4>Emergency Line</h4><p><a href={`tel:${contact.phone1Tel}`}>{contact.phone1}</a></p></div>
             </div>
             <div className="contact-info-card">
               <i className="fas fa-envelope" aria-hidden="true"></i>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:communications@richmond.gov.za">communications@richmond.gov.za</a></p>
+                <p><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
               </div>
             </div>
             <div className="contact-info-card">
@@ -130,15 +133,15 @@ export default function ReportIssuePage() {
                 <h3 style={{ marginBottom: '0.75rem', fontSize: '1rem', fontWeight: 600 }}>Emergency Contacts</h3>
                 <div className="address-item">
                   <i className="fas fa-bolt" aria-hidden="true"></i>
-                  <div><strong>Electrical Faults</strong><p><a href="tel:0332122155">(033) 212 2155</a></p></div>
+                  <div><strong>Electrical Faults</strong><p><a href={`tel:${contact.phone1Tel}`}>{contact.phone1}</a></p></div>
                 </div>
                 <div className="address-item">
                   <i className="fas fa-faucet" aria-hidden="true"></i>
-                  <div><strong>Water Bursts</strong><p><a href="tel:0332122155">(033) 212 2155</a></p></div>
+                  <div><strong>Water Bursts</strong><p><a href={`tel:${contact.phone1Tel}`}>{contact.phone1}</a></p></div>
                 </div>
                 <div className="address-item">
                   <i className="fas fa-road" aria-hidden="true"></i>
-                  <div><strong>Road Hazards</strong><p><a href="tel:0332122155">(033) 212 2155</a></p></div>
+                  <div><strong>Road Hazards</strong><p><a href={`tel:${contact.phone1Tel}`}>{contact.phone1}</a></p></div>
                 </div>
               </div>
             </div>

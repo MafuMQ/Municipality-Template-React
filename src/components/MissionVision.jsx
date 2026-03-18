@@ -1,13 +1,15 @@
+import { municipality } from '../config/municipalityConfig'
+
 const cards = [
   {
     icon: 'fas fa-bullseye',
     heading: 'Vision',
-    text: 'To develop uMhlabuyalingana Local Municipality as a viable and sustainable local government that improves the quality of life and creates a pleasant living and working environment for all citizens.',
+    text: municipality.vision,
   },
   {
     icon: 'fas fa-rocket',
     heading: 'Mission',
-    text: 'uMhlabuyalingana Municipality will improve the livelihood of citizens by delivering services efficiently and effectively, promoting investment and economic growth, and involving local communities and stakeholders in municipal affairs in a structured manner.',
+    text: municipality.mission,
   },
 ]
 
@@ -19,7 +21,7 @@ export default function MissionVision() {
           <div className="mv-header">
             <i className={c.icon}></i>
             <div>
-              <h4>UMHLABUYALINGANA</h4>
+              <h4>{municipality.abbreviation}</h4>
               <p>LOCAL MUNICIPALITY</p>
             </div>
           </div>

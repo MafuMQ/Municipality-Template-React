@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { GDRIVE_API_KEY } from '../data/documentCategories'
+import { municipality } from '../config/municipalityConfig'
 
 const GALLERY_FOLDER_ID = import.meta.env.VITE_GALLERY_FOLDER_ID || ''
 
@@ -41,7 +42,7 @@ export default function GallerySection() {
       <div className="container">
         <div className="gallery-header">
           <div>
-            <h6>uMhlabuyalingana Local Municipality</h6>
+            <h6>{municipality.name}</h6>
             <h2>A Glimpse Of Our Municipality</h2>
           </div>
         </div>

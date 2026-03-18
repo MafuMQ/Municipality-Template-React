@@ -1,3 +1,5 @@
+import { municipality } from '../config/municipalityConfig'
+
 const externalLinks = [
   { href: 'https://www.gov.za/', label: 'Government' },
   { href: 'http://www.kznonline.gov.za/', label: 'KZN Province' },
@@ -9,27 +11,29 @@ const externalLinks = [
 
 const internalLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about-us/', label: 'About Umhlabuyalingana' },
+  { href: '/about-us/', label: `About ${municipality.name.split(' ')[0]}` },
   { href: '/departments/', label: 'Departments' },
   { href: '/scm/', label: 'SCM' },
   { href: '#documents', label: 'Documents' },
   { href: '/vacancies/', label: 'Vacancies' },
 ]
 
+const { contact, address, social } = municipality
+
 const contactItems = [
-  { icon: 'fas fa-phone', text: '(035) 592 0680' },
-  { icon: 'fas fa-phone', text: '(035) 592 9628' },
-  { icon: 'fas fa-fax', text: '(035) 592 0672' },
-  { icon: 'fas fa-envelope', text: 'info@mhlabuyalingana.gov.za', href: 'mailto:info@mhlabuyalingana.gov.za' },
-  { icon: 'fas fa-envelope-open-text', text: 'Private Bag X901, KwaNgwanase, 3973' },
-  { icon: 'fas fa-location-dot', text: 'Main Road R22, KwaNgwanase, 3973' },
+  { icon: 'fas fa-phone',              text: contact.phone1 },
+  { icon: 'fas fa-phone',              text: contact.phone2 },
+  { icon: 'fas fa-fax',                text: contact.fax },
+  { icon: 'fas fa-envelope',           text: contact.email, href: `mailto:${contact.email}` },
+  { icon: 'fas fa-envelope-open-text', text: address.postal },
+  { icon: 'fas fa-location-dot',       text: address.physicalMedium },
 ]
 
 const socialLinks = [
-  { href: '#', icon: 'fab fa-facebook-f' },
-  { href: '#', icon: 'fab fa-x-twitter' },
-  { href: '#', icon: 'fab fa-instagram' },
-  { href: '#', icon: 'fab fa-youtube' },
+  { href: social.facebook,  icon: 'fab fa-facebook-f' },
+  { href: social.twitter,   icon: 'fab fa-x-twitter' },
+  { href: social.instagram, icon: 'fab fa-instagram' },
+  { href: social.youtube,   icon: 'fab fa-youtube' },
 ]
 
 export default function Footer() {
@@ -85,7 +89,7 @@ export default function Footer() {
       <div className="copyright">
         <div className="container">
           <p>
-            All rights reserved 2025. uMhlabuyalingana Municipality. Website powered by{' '}
+            All rights reserved 2025. {municipality.shortName}. Website powered by{' '}
             <a href="https://www.novadataco.co.za/" target="_blank" rel="noreferrer">
               NovaData Co
             </a>
