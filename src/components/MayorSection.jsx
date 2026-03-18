@@ -1,4 +1,4 @@
-import mayorImg from '../assets/Councillor TS Khumalo.png';
+import mayorImg from '../assets/Councillor.png';
 
 export default function MayorSection() {
   return (
